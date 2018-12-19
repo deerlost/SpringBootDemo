@@ -3,8 +3,11 @@ package com.makotojava.learn.springboot.lambda.lambda;
 
 import com.makotojava.learn.springboot.lambda.model.Person;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @Description TODO
@@ -22,17 +25,55 @@ public class TestFunctionalInterface {
         enact(s -> System.out.println(s), "myLambda");
         System.out.println("执行");*/
 
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
+        List<String> strList = list.stream()
+                .map(String::valueOf)
+                .collect(Collectors.toList());
+
+        List<Map<String, Object>> mapList = new ArrayList<>();
+
+      /*  list.forEach(i -> {
+            strList.stream().forEach(string -> map.put(string, i));
+            mapList.add(map);
+            mapList.forEach(key -> System.out.println(key));
+        });*/
+
+       /* for (Integer i : list) {
+            strList.stream().forEach(string -> map.put(string, i));
+            mapList.add(map);
+
+            mapList.forEach(key -> System.out.println(key));
+
+        }*/
+
+
         List<Person> guiltyPersons = Arrays.asList(
-                new Person("Yixing",  25),
-                new Person("Yanggui", 30),
+                new Person("Yixing", 25),
+                new Person("Zanggui", 30),
                 new Person("Chao", 29)
         );
 
-        checkAndExecute(guiltyPersons, p -> p.getName().startsWith("Z"), p -> System.out.println(p.getName()));
+        checkAndExecute(guiltyPersons, p -> p.getName().startsWith("A"), p -> System.out.println(p.getName()));
+
+        list.forEach(i -> {
+            strList.stream().forEach(
+                    str -> {
+                        if ((i == Integer.parseInt(str))) {
+                            Map<String, Object> map = new HashMap<>();
+                            map.put(str, i);
+                            mapList.add(map);
+                        }
+                    });
+            mapList.forEach(key -> System.out.println(key));
+        });
+    }
+
+    public Stream checkEqual(List<String> strList, Predicate predicate, Consumer<Person> consumer) {
+        return strList.stream().filter(str -> predicate.test(str));
     }
 
 
-    public static void enact(MyLambdaInterface myLambda,String s){
+    public static void enact(MyLambdaInterface myLambda, String s) {
         myLambda.doSomeShit(s);
     }
 
