@@ -1,4 +1,4 @@
-package com.makotojava.learn.springboot.lambda.model;
+package com.makotojava.learn.springboot.model;
 
 
 

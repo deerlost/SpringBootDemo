@@ -2,7 +2,7 @@ package com.makotojava.learn.springboot.lambda.lambda;
 
 
 
-import com.makotojava.learn.springboot.lambda.model.Person;
+import com.makotojava.learn.springboot.model.Person;
 
 import java.util.*;
 import java.util.function.Predicate;
