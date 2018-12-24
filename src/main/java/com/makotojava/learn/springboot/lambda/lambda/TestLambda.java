@@ -85,6 +85,14 @@ public class TestLambda {
 
         System.out.println("Print language whose length greater than 4:");
         filter(languages, (str)->((String) str).length() > 4);
+
+
+        Predicate<String> startsWithJ = (n) -> n.startsWith("J");
+        Predicate<String> fourLetterLong = (n) -> n.length() == 4;
+
+        languages.stream()
+                .filter(startsWithJ.and(fourLetterLong))
+                .forEach((n) -> System.out.print("Name, which starts with 'J' and four letter long is : " + n));
     }
 
     public static void filter(List names, Predicate condition) {

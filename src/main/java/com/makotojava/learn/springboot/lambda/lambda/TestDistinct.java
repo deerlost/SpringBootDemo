@@ -31,7 +31,11 @@ public class TestDistinct {
         map2.put("id", 1);
         map2.put("name", "Jerry");
         distinctList.add(map2);
+        List<Map<String,Object>> result =distinctList.stream().filter(distinctByKey(m -> m.get("id"))).collect(Collectors.toList());
+        result.forEach(m-> System.out.println(m));
         distinctList.stream().filter(distinctByKey(m -> m.get("id"))).collect(Collectors.toList()).forEach(m -> System.out.println(m));
+        System.out.println("原来的list========");
+        distinctList.forEach(m-> System.out.println(m));
 
         Person lokesh = new Person("Lokesh", 1);
         Person brian = new Person("Brian", 2);
@@ -40,9 +44,6 @@ public class TestDistinct {
         List<Person> people = Arrays.asList(lokesh,brian,alex,lokesh,brian,alex);
 
         people.stream().filter(distinctByKey(p -> p.getAge())).collect(Collectors.toList()).forEach(p -> System.out.println(p.getName()));
-
-
-
     }
 
     public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) {
