@@ -76,6 +76,14 @@
     </build>
 
     <dependencies>
+
+        <!--easypoi-->
+        <dependency>
+            <groupId>cn.afterturn</groupId>
+            <artifactId>easypoi-spring-boot-starter</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
         <!-- odotCore -->
         <dependency>
             <groupId>com.makotojava.learn</groupId>
