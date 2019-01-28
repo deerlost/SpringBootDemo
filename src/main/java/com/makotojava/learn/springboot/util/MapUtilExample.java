@@ -58,8 +58,9 @@ public class MapUtilExample {
         // @FunctionalInterface public interface BiConsumer<T, U> {void accept(T
         // t, U u);
         map.forEach((id, val) -> {
-            if(id >1)
-            System.out.println(val);});
+            if (id > 1)
+                System.out.println(val);
+        });
     }
 
     /**
@@ -79,14 +80,19 @@ public class MapUtilExample {
 
         // 解释:将K-3映射的value->compute->"value3" + 3 = value33
         //map.remove(3);
-        map.computeIfPresent(3, (key, val) -> val + key*2);
+
+        map.forEach((k,v) -> System.out.println(k+"==="+v));
+        map.compute(20, (k,v) ->v="H");
+        System.out.println(map.get(20));
+        map.forEach((k,v) -> System.out.println(k+"==="+v));
+        map.computeIfPresent(3, (key, val) -> val + key * 2);
         System.out.println(map.get(3));
 
         // 解释:这里将K-3映射的value进行重映射->null
         // 该方法源码实现会判断如果newValue为null则会执行remove(key)方法,将移除key
         map.computeIfPresent(9, (key, val) -> null);
         // 从上面的解释中得到，输出为false,因为已经被移除了
-       // map.forEach((k,v) -> System.out.println(v));
+        // map.forEach((k,v) -> System.out.println(v));
         System.out.println(map.containsKey(9));
 
         // default V computeIfAbsent(K key,Function<? super K, ? extends V>

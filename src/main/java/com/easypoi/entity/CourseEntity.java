@@ -6,6 +6,8 @@ import cn.afterturn.easypoi.excel.annotation.ExcelCollection;
 import cn.afterturn.easypoi.excel.annotation.ExcelEntity;
 import cn.afterturn.easypoi.excel.annotation.ExcelTarget;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -16,7 +18,7 @@ import java.util.List;
  * @date：2019/1/23
  * @版本：V1.0
  */
-@ExcelTarget("courseEntity")
+@ExcelTarget("CourseEntity")
 public class CourseEntity implements java.io.Serializable {
     /**
      * 主键
@@ -27,13 +29,14 @@ public class CourseEntity implements java.io.Serializable {
      */
     @Excel(name = "课程名称", orderNum = "1", width = 25, needMerge = true)
     private String name;
+
     /**
      * 老师主键
      */
-    @ExcelEntity(id = "absent")
+    @ExcelEntity(id = "teacherEntity")
     private TeacherEntity mathTeacher;
 
-    @ExcelCollection(name = "学生", orderNum = "4")
+    @ExcelCollection(name = "学生", orderNum = "2")
     private List<StudentEntity> students;
 
     public CourseEntity(String id, String name) {

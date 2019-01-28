@@ -29,6 +29,14 @@ public class StreamUtilExample {
 
     private List<String> stringList = new ArrayList<>();
 
+    public List<String> getStringList() {
+        return stringList;
+    }
+
+    public void setStringList(List<String> stringList) {
+        this.stringList = stringList;
+    }
+
     public StreamUtilExample() {
         init();
     }
@@ -163,6 +171,7 @@ public class StreamUtilExample {
         // @FunctionalInterface public interface BiFunction<T, U, R> { R apply(T
         // t, U u);
         Optional<String> reduced = stringList.stream().sorted().reduce((s1, s2) -> s1 + "#" + s2);
+
 
         // 解释:集合元素排序后->reduce(削减 )->将元素以#连接->生成Optional对象(其get方法返回#拼接后的值)
         reduced.ifPresent(System.out::println);

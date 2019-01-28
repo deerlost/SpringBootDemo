@@ -20,6 +20,9 @@ public class TeacherEntity implements java.io.Serializable {
     @Excel(name = "主讲老师_teacherEntity,代课老师_absent", orderNum = "1", mergeVertical = true, needMerge = true, isImportField = "true_major,true_absent")
     private String name;
 
+    @Excel(name = "老师年龄_teacherEntity,年龄_age", orderNum = "2", mergeVertical = true, needMerge = true, isImportField = "true_major,true_absent")
+    private Integer age;
+
     public TeacherEntity(String name) {
         this.name = name;
     }
@@ -30,6 +33,19 @@ public class TeacherEntity implements java.io.Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public TeacherEntity(String name, Integer age) {
+        this.name = name;
+        this.age = age;
     }
 }
 
