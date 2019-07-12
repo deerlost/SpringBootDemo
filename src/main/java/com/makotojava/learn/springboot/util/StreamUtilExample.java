@@ -109,7 +109,7 @@ public class StreamUtilExample {
         long sequenceT1 = System.nanoTime();
 
         // 输出:sequential sort took: 51921 ms.
-        System.out.format("sequential sort took: %d ms.", sequenceT1 - sequenceT0).println();
+        System.out.format("sequential sort took: %d ns.", sequenceT1 - sequenceT0).println();
 
         // 使用并行流排序
         long parallelT0 = System.nanoTime();

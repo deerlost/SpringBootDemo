@@ -31,6 +31,16 @@ public class CourseEntity implements java.io.Serializable {
     private String name;
 
     /**
+     *图片导出
+     *表示type =2 该字段类型为图片,imageType=1
+     *(默认可以不填),表示从file读取,字段类型是个字符串类型
+     *可以用相对路径也可以用绝对路径,绝对路径优先依次获取
+     *图片是先贴单元格，后合并
+     */
+    @Excel(name = "课程图片", orderNum = "1",width = 25, height = 25,type = 2,needMerge = true)
+    private String courseImg;
+
+    /**
      * 老师主键
      */
     @ExcelEntity(id = "teacherEntity")
@@ -42,6 +52,12 @@ public class CourseEntity implements java.io.Serializable {
     public CourseEntity(String id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public CourseEntity(String id, String name, String courseImg) {
+        this.id = id;
+        this.name = name;
+        this.courseImg = courseImg;
     }
 
     public String getId() {
@@ -74,5 +90,14 @@ public class CourseEntity implements java.io.Serializable {
 
     public void setStudents(List<StudentEntity> students) {
         this.students = students;
+    }
+
+    public String getCourseImg() {
+        return courseImg;
+    }
+
+    public CourseEntity setCourseImg(String courseImg) {
+        this.courseImg = courseImg;
+        return this;
     }
 }

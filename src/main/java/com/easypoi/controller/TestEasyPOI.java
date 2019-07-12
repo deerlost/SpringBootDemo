@@ -9,6 +9,8 @@ import cn.afterturn.easypoi.excel.entity.TemplateExportParams;
 import cn.afterturn.easypoi.excel.entity.enmus.ExcelType;
 import cn.afterturn.easypoi.excel.entity.params.ExcelExportEntity;
 import cn.afterturn.easypoi.excel.export.styler.ExcelExportStylerDefaultImpl;
+import cn.afterturn.easypoi.pdf.PdfExportUtil;
+import cn.afterturn.easypoi.pdf.entity.PdfExportParams;
 import com.easypoi.entity.CourseEntity;
 import com.easypoi.entity.StudentEntity;
 import com.easypoi.entity.TeacherEntity;
@@ -20,12 +22,17 @@ import com.google.common.collect.Lists;
 import com.makotojava.learn.springboot.util.StreamUtilExample;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.junit.Before;
+import org.junit.Test;
 import org.springframework.ui.ModelMap;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+import com.itextpdf.text.Document;
+
 
 /**
  * @Description TODO
@@ -42,17 +49,30 @@ public class TestEasyPOI {
         try {
 
              testExportExcel_1();
+            //testExportPDF_1();
 
             //fe_map();
             // one();
             // test();
             // String str = download();
-            //testSplitCollection();
+//           testSplitCollection();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+
+    @Before
+    public void initData() {
+
+    }
+
+    @Test
+    public void testArray() {
+        CourseEntity course = new CourseEntity("1", "西天取经小班", "D:\\sourceFile\\argentina.jpg");
+
+
+    }
 
     public static void testSplitCollection() {
         StreamUtilExample streamUtilExample = new StreamUtilExample();
@@ -69,11 +89,11 @@ public class TestEasyPOI {
 
     }
 
-    //   System.out.println("第一种结束");
+    //System.out.println("第一种结束");
        /* Iterable<List<String>> subList = Iterables.partition(intList, 2);
         Iterator<List<String>> iterator = subList.iterator();
 
-        //    Iterator<? extends List<?>> iterable = ExeclUtil.splitCollection(list, 2);
+        //Iterator<? extends List<?>> iterable = ExeclUtil.splitCollection(list, 2);
 
         if (iterator.hasNext()) {
             List<String> item = iterator.next();
@@ -83,11 +103,45 @@ public class TestEasyPOI {
         }
 */
 
-
-    public static void testExportExcel_1() throws Exception {
-        ExportParams params = new ExportParams("0328课程表", "日期：2016-03-28", "六年一班");
+    public static void testExportPDF_1() throws Exception {
+        //   ExportParams params = new ExportParams("0328课程表", "日期：2016-03-28", "六年一班");
         // params.setHeight((short) 100);
         // params.setTitleHeight((short) 50);
+        PdfExportParams params = new PdfExportParams("0328课程表", null);
+       /* params.setStyle(ExcelExportHeaderStyleTest.class);
+
+        params.setHeaderHeight((short) 20);
+        params.setHeaderColor(IndexedColors.GREY_25_PERCENT.getIndex());*/
+        params.setTitleHeight((short) 30);
+        params.setSecondTitleHeight((short) 15);
+
+        CourseEntity course = new CourseEntity("1", "西天取金小班", "D:\\sourceFile\\argentina.jpg");
+        TeacherEntity teacher = new TeacherEntity("唐僧");
+        StudentEntity student = new StudentEntity("孙悟空", 1, new SimpleDateFormat("yyyy-MM-dd").parse("1995-06-01"), new SimpleDateFormat("yyyy-MM-dd").parse("2014-06-01"));
+        StudentEntity student1 = new StudentEntity("猪九戒", 1, new SimpleDateFormat("yyyy-MM-dd").parse("1995-06-01"), new SimpleDateFormat("yyyy-MM-dd").parse("2014-06-01"));
+        course.setMathTeacher(teacher);
+        course.setStudents(Arrays.asList(student, student1));
+
+        List<CourseEntity> courseEntityList = new ArrayList<>();
+        courseEntityList.add(course);
+
+
+        File file = new File("D:/excel/test.pdf");
+        file.createNewFile();
+        Document document = PdfExportUtil.exportPdf(params, CourseEntity.class, courseEntityList, new FileOutputStream(file));
+
+    }
+
+
+    public static void testExportExcel_1() throws Exception {
+
+        /**
+         * ExportParams 导出Excel的类
+         */
+        ExportParams params = new ExportParams("0328课程表", "日期：2016-03-28", "六年一班");
+      //  ExportParams params = new ExportParams("0328课程表", "日期：2016-03-28", "六年一班");
+      //  params.setHeight((short) 100);
+       // params.setTitleHeight((short) 50);
 
         params.setStyle(ExcelExportHeaderStyleTest.class);
 
@@ -96,8 +150,8 @@ public class TestEasyPOI {
         params.setTitleHeight((short) 30);
         params.setSecondTitleHeight((short) 15);
 
-        CourseEntity course = new CourseEntity("1", "西天取金小班");
-        TeacherEntity teacher = new TeacherEntity("老王", 19);
+        CourseEntity course = new CourseEntity("1", "西天取金小班","D:\\sourceFile\\argentina.jpg");
+        TeacherEntity teacher = new TeacherEntity("唐僧",30);
         StudentEntity student = new StudentEntity("孙悟空", 1, new SimpleDateFormat("yyyy-MM-dd").parse("1995-06-01"), new SimpleDateFormat("yyyy-MM-dd").parse("2014-06-01"));
         StudentEntity student1 = new StudentEntity("猪九戒", 1, new SimpleDateFormat("yyyy-MM-dd").parse("1995-06-01"), new SimpleDateFormat("yyyy-MM-dd").parse("2014-06-01"));
         course.setMathTeacher(teacher);
@@ -109,7 +163,7 @@ public class TestEasyPOI {
         Workbook workbook = ExcelExportUtil.exportExcel(params, CourseEntity.class, courseEntityList);
 
 
-        List<ExcelExportEntity> entity = new ArrayList<ExcelExportEntity>();
+        /*List<ExcelExportEntity> entity = new ArrayList<ExcelExportEntity>();
         entity.add(new ExcelExportEntity("姓名", "name"));
         entity.add(new ExcelExportEntity("性别", "sex"));
 
@@ -123,9 +177,10 @@ public class TestEasyPOI {
         }
 
         Workbook wb = ExcelExportUtil.exportExcel(new ExportParams(
-                "测试", "测试"), entity, list);
+                "测试", "测试"), entity, list);*/
 
-        FileOutputStream fos = new FileOutputStream("D:/targetFile/"+System.currentTimeMillis()+".xls");
+       // FileOutputStream fos = new FileOutputStream("D:/targetFile/" + System.currentTimeMillis() + ".xls");
+        FileOutputStream fos = new FileOutputStream("D:/targetFile/课程表.xls");
         workbook.write(fos);
         fos.close();
 
@@ -187,7 +242,6 @@ public class TestEasyPOI {
             lm.put("quancheng", "开源项目");
             lm.put("sqje", i * 10000 + "");
             lm.put("hdje", i * 10000 + "");
-
             listMap.add(lm);
         }
         map.put("maplist", listMap);

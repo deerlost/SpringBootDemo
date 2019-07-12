@@ -2,6 +2,8 @@ package com.easypoi.util;
 
 import cn.afterturn.easypoi.excel.export.styler.AbstractExcelExportStyler;
 import cn.afterturn.easypoi.excel.export.styler.IExcelExportStyler;
+import org.apache.poi.hssf.usermodel.HSSFFont;
+import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.*;
 
 /**
@@ -24,17 +26,15 @@ public class ExcelExportHeaderStyleTest extends AbstractExcelExportStyler implem
 
         headerStyle.setAlignment(HorizontalAlignment.CENTER);
         headerStyle.setVerticalAlignment(VerticalAlignment.CENTER);
-        //   headerStyle.setWrapText(true);//自动换行
         headerStyle.setFillForegroundColor(IndexedColors.WHITE.getIndex());
         headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 
         Font font = workbook.createFont();
-        //font.setColor(HSSFColor.BLACK.index);
-        //font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
         font.setFontHeightInPoints((short) 20);
         font.setFontName("华文中宋");
-        //font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);//粗体显示
-        //font.setColor(HSSFColor.WHITE.index);
+        //粗体显示
+        font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+        font.setColor(HSSFColor.WHITE.index);
         headerStyle.setFont(font);
 
         return headerStyle;
@@ -55,11 +55,8 @@ public class ExcelExportHeaderStyleTest extends AbstractExcelExportStyler implem
         cellStyle.setBorderRight(BorderStyle.THIN);
 
         Font fontTitle = this.workbook.createFont();
-        //font.setColor(HSSFColor.BLACK.index);
         fontTitle.setFontName("华文中宋");
         fontTitle.setFontHeightInPoints((short) 11);
-        //font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
-        // 把字体应用到当前的样式
         cellStyle.setFont(fontTitle);
 
         return cellStyle;

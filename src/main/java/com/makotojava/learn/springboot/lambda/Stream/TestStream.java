@@ -15,7 +15,7 @@ import com.makotojava.learn.springboot.util.StreamUtilExample;
 public class TestStream {
 
     public static void main(String[] args) {
- /*       StreamUtilExample example = new StreamUtilExample();
+        StreamUtilExample example = new StreamUtilExample();
 
 
         example.useStreamFilter();
@@ -33,7 +33,7 @@ public class TestStream {
         System.out.println("==============================");
 
         example.useParallelStreams();
-        System.out.println("==============================");*/
+        System.out.println("==============================");
 
 
         MapUtilExample mapExample = new MapUtilExample();

@@ -1,11 +1,12 @@
 package com.makotojava.learn.springboot.lambda.lambda;
 
 
-
 import com.makotojava.learn.springboot.model.Person;
+import org.junit.Test;
 
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -48,11 +49,11 @@ public class TestLambda {
                 "Stream API", "Date and Time API");
         for (String feature : features) {
 
-     //       System.out.println(feature);
+            //       System.out.println(feature);
         }
 
-        List<Map<String,Object>> mapList = new ArrayList<Map<String, Object>>();
-        Map<String,Object> param = new HashMap<String, Object>();
+        List<Map<String, Object>> mapList = new ArrayList<Map<String, Object>>();
+        Map<String, Object> param = new HashMap<String, Object>();
         param.put("key", "value");
         param.put("key1", "value1");
         mapList.add(param);
@@ -62,7 +63,7 @@ public class TestLambda {
 
         //In Java 8:
 
-     //   features.forEach(n -> System.out.println(n));
+        //   features.forEach(n -> System.out.println(n));
 
 // Even better use Method reference feature of Java 8
 // method reference is denoted by :: (double colon) operator
@@ -72,19 +73,19 @@ public class TestLambda {
         List languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
 
         System.out.println("Languages which starts with J :");
-        filter(languages, (str)->((String) str).startsWith("J"));
+        filter(languages, (str) -> ((String) str).startsWith("J"));
 
         System.out.println("Languages which ends with a ");
-        filter(languages, (str)->((String) str).endsWith("a"));
+        filter(languages, (str) -> ((String) str).endsWith("a"));
 
         System.out.println("Print all languages :");
-        filter(languages, (str)->true);
+        filter(languages, (str) -> true);
 
         System.out.println("Print no language : ");
-        filter(languages, (str)->false);
+        filter(languages, (str) -> false);
 
         System.out.println("Print language whose length greater than 4:");
-        filter(languages, (str)->((String) str).length() > 4);
+        filter(languages, (str) -> ((String) str).length() > 4);
 
 
         Predicate<String> startsWithJ = (n) -> n.startsWith("J");
@@ -98,10 +99,10 @@ public class TestLambda {
     public static void filter(List names, Predicate condition) {
         Stream steam = names.stream().filter((name) -> (condition.test(name)));
 
-        steam.forEach((name) -> {System.out.println(name + " ");
-                });
+        steam.forEach((name) -> {
+            System.out.println(name + " ");
+        });
     }
-
 
 
     public static void runThreadUseLambda() {
@@ -120,5 +121,16 @@ public class TestLambda {
         }).start();
     }
 
+    @Test
+    public void testFilter() {
+        List<String> input = Arrays.asList("8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381");
+
+        List<String> output = Arrays.asList("8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381");
+
+        List<String> result = input.stream().filter(in -> output.contains(in)).collect(Collectors.toList());
+
+        System.out.println(result.toString());
+
+    }
 
 }

@@ -14,11 +14,10 @@ import java.util.Date;
  * @版本：V1.0
  */
 public class StudentEntity {
-
     /**
      * 学生姓名
      */
-    @Excel(name = "学生姓名", height = 20, width = 30, isImportField = "true_st")
+    @Excel(name = "学生姓名", height = 20, width = 30,needMerge = true,isImportField = "true_st")
     private String name;
     /**
      * 学生性别

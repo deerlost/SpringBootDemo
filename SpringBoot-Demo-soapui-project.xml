@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="b429792e-7bc5-4d84-b868-23a8c2e9f588" activeEnvironment="Default" name="SpringBootDemo"
-                    resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL"
-                    xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="b429792e-7bc5-4d84-b868-23a8c2e9f588" activeEnvironment="Default" name="SpringBootDemo" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
     <con:settings/>
-    <con:interface xsi:type="con:RestService" id="72d890f8-fe50-443d-9d41-c470e4fa8f2b"
-                   wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:interface xsi:type="con:RestService" id="72d890f8-fe50-443d-9d41-c470e4fa8f2b" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:settings/>
         <con:definitionCache type="TEXT" rootPart=""/>
         <con:endpoints>
@@ -52,8 +48,7 @@
                     <con:params/>
                     <con:element>data</con:element>
                 </con:representation>
-                <con:request name="TEST_123" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json"
-                             postQueryString="false">
+                <con:request name="TEST_123" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json" postQueryString="false">
                     <con:settings>
                         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
                         </con:setting>
@@ -108,8 +103,7 @@
                     <con:params/>
                     <con:element>data</con:element>
                 </con:representation>
-                <con:request name="ID 5" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json"
-                             postQueryString="false">
+                <con:request name="ID 5" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json" postQueryString="false">
                     <con:settings>
                         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
                         </con:setting>
@@ -158,8 +152,7 @@
                     <con:params/>
                     <con:element>data</con:element>
                 </con:representation>
-                <con:request name="ID 5" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json"
-                             postQueryString="false">
+                <con:request name="ID 5" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json" postQueryString="false">
                     <con:settings>
                         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
                         </con:setting>
@@ -201,8 +194,7 @@
                     <con:params/>
                     <con:element xmlns:add="http://localhost/CategoryService/Add">add:Response</con:element>
                 </con:representation>
-                <con:request name="TEST_TODO_ITEM_2" id="028b9fdc-b506-4650-a21f-8cbeee336fba"
-                             mediaType="application/json" postQueryString="false">
+                <con:request name="TEST_TODO_ITEM_2" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json" postQueryString="false">
                     <con:settings>
                         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
                         </con:setting>
@@ -255,8 +247,7 @@
                     <con:params/>
                     <con:element>data</con:element>
                 </con:representation>
-                <con:request name="TEST_TODO_ITEM_2" id="028b9fdc-b506-4650-a21f-8cbeee336fba"
-                             mediaType="application/json" postQueryString="false">
+                <con:request name="TEST_TODO_ITEM_2" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json" postQueryString="false">
                     <con:settings>
                         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
                         </con:setting>
@@ -310,8 +301,7 @@
                     <con:params/>
                     <con:element>data</con:element>
                 </con:representation>
-                <con:request name="ID 8" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json"
-                             postQueryString="false">
+                <con:request name="ID 8" id="028b9fdc-b506-4650-a21f-8cbeee336fba" mediaType="application/json" postQueryString="false">
                     <con:settings>
                         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
                         </con:setting>

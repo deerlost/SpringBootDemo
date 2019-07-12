@@ -85,7 +85,11 @@ public class MapUtilExample {
         map.compute(20, (k,v) ->v="H");
         System.out.println(map.get(20));
         map.forEach((k,v) -> System.out.println(k+"==="+v));
-        map.computeIfPresent(3, (key, val) -> val + key * 2);
+        final String[] str = {new String("")};
+        map.computeIfPresent(3, (key, val) -> {
+            val=val + key * 2;
+            str[0] ="45";
+            return val;});
         System.out.println(map.get(3));
 
         // 解释:这里将K-3映射的value进行重映射->null
