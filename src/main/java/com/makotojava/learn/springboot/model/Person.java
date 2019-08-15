@@ -36,4 +36,11 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+
+    public Person() {
+    }
+
+    public Person init(){
+       return  new Person("bob",11);
+    }
 }
