@@ -1,12 +1,16 @@
 package com.makotojava.learn.springboot.model;
 
 
+import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.toSet;
 
 /**
  * @Description TODO
@@ -39,6 +43,8 @@ public class testEnum {
                 System.out.printf(" %s : %s%n", Student.ClassRoom.values()[j], student.name);
             }
         }
+        Map<Student.ClassRoom, Set<Student>> studentStreamByRoom = students.stream().collect(groupingBy(s->s.room,()->new EnumMap<>(Student.ClassRoom.class),toSet()));
+        System.out.println(studentStreamByRoom);
 
         System.out.println(true | false);
         PayrollDay day = PayrollDay.WEDNESDAY;
