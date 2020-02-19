@@ -4,10 +4,14 @@ package com.makotojava.learn.springboot.lambda.lambda;
 import com.makotojava.learn.springboot.model.Person;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 
 /**
@@ -27,7 +31,15 @@ public class TestLambda {
         Comparator c = Comparator.comparing(Person::getAge);
         Person p1 = new Person("tom", 11);
         Person p2 = new Person("jerry", 12);
+        Person p3 = new Person("test", 15);
         System.out.println(c.compare(p1, p2));
+
+        List<Person> people = Arrays.asList(p1, p2, p3);
+
+        List<Person> collect = people.stream().filter(p -> p.getAge() > 13)
+                .peek(p -> p.setAge(19))
+                .collect(Collectors.toList());
+
 
       /*  JFrame frame = new JFrame();
         frame.setLayout(new FlowLayout());
@@ -97,11 +109,10 @@ public class TestLambda {
     }
 
     public static void filter(List names, Predicate condition) {
-        Stream steam = names.stream().filter((name) -> (condition.test(name)));
-
-        steam.forEach((name) -> {
+        names.stream().filter((name) -> (condition.test(name))).forEach((name) -> {
             System.out.println(name + " ");
         });
+
     }
 
 
@@ -123,9 +134,9 @@ public class TestLambda {
 
     @Test
     public void testFilter() {
-        List<String> input = Arrays.asList("8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381");
+        List<String> input = Arrays.asList("8000997971381", "8000997971381", "8000997591381", "8000997591381", "8000997971381", "8000997971381", "8000997591381", "8000997591381", "8000997971381", "8000997971381", "8000997591381", "8000997591381", "8000997971381", "8000997971381", "8000997591381", "8000997591381");
 
-        List<String> output = Arrays.asList("8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381","8000997971381", "8000997971381", "8000997591381", "8000997591381");
+        List<String> output = Arrays.asList("8000997971381", "8000997971381", "8000997591381", "8000997591381", "8000997971381", "8000997971381", "8000997591381", "8000997591381", "8000997971381", "8000997971381", "8000997591381", "8000997591381", "8000997971381", "8000997971381", "8000997591381", "8000997591381");
 
         List<String> result = input.stream().filter(in -> output.contains(in)).collect(Collectors.toList());
 

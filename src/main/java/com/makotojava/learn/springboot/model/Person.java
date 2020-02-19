@@ -15,21 +15,22 @@ public class Person {
 
     private Integer age;
 
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Person setName(String name) {
         this.name = name;
+        return this;
     }
 
     public Integer getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public Person setAge(Integer age) {
         this.age = age;
+        return this;
     }
 
     public Person(String name, Integer age) {

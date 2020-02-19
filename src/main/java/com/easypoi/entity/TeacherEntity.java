@@ -23,6 +23,10 @@ public class TeacherEntity implements java.io.Serializable {
     @Excel(name = "老师年龄_teacherEntity,年龄_age", orderNum = "2", mergeVertical = true, needMerge = true, isImportField = "true_major,true_absent")
     private Integer age;
 
+
+    public TeacherEntity() {
+    }
+
     public TeacherEntity(String name) {
         this.name = name;
     }

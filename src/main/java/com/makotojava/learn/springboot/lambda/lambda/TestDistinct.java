@@ -31,18 +31,23 @@ public class TestDistinct {
         map2.put("id", 1);
         map2.put("name", "Jerry");
         distinctList.add(map2);
-        List<Map<String,Object>> result =distinctList.stream().filter(distinctByKey(m -> m.get("id"))).collect(Collectors.toList());
-        result.forEach(m-> System.out.println(m));
+        List<Map<String, Object>> result = distinctList.stream()
+                .filter(distinctByKey(m -> m.get("id")))
+                .collect(Collectors.toList());
+        result.forEach(m -> System.out.println(m));
         distinctList.stream().filter(distinctByKey(m -> m.get("id"))).collect(Collectors.toList()).forEach(m -> System.out.println(m));
         System.out.println("原来的list========");
-        distinctList.forEach(m-> System.out.println(m));
+        distinctList.forEach(m -> System.out.println(m));
 
         Person lokesh = new Person("Lokesh", 1);
         Person brian = new Person("Brian", 2);
         Person alex = new Person("Alex", 3);
 
-        List<Person> people = Arrays.asList(lokesh,brian,alex,lokesh,brian,alex);
+        List<Person> people = Arrays.asList(lokesh, brian, alex, lokesh, brian, alex);
 
+        Map<String, List<Person>> collect = people.stream().collect(Collectors.groupingBy(p -> new StringBuffer().append(p.getName()).append(p.getAge()).toString()));
+        brian.setAge(10);
+        
         people.stream().filter(distinctByKey(p -> p.getAge())).collect(Collectors.toList()).forEach(p -> System.out.println(p.getName()));
     }
 

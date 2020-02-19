@@ -38,6 +38,9 @@ public class StudentEntity {
         this.registrationDate = registrationDate;
     }
 
+    public StudentEntity() {
+    }
+
     public String getName() {
         return name;
     }

@@ -49,6 +49,9 @@ public class CourseEntity implements java.io.Serializable {
     @ExcelCollection(name = "学生", orderNum = "2")
     private List<StudentEntity> students;
 
+    public CourseEntity() {
+    }
+
     public CourseEntity(String id, String name) {
         this.id = id;
         this.name = name;
@@ -64,32 +67,18 @@ public class CourseEntity implements java.io.Serializable {
         return id;
     }
 
-    public void setId(String id) {
+    public CourseEntity setId(String id) {
         this.id = id;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public CourseEntity setName(String name) {
         this.name = name;
-    }
-
-    public TeacherEntity getMathTeacher() {
-        return mathTeacher;
-    }
-
-    public void setMathTeacher(TeacherEntity mathTeacher) {
-        this.mathTeacher = mathTeacher;
-    }
-
-    public List<StudentEntity> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<StudentEntity> students) {
-        this.students = students;
+        return this;
     }
 
     public String getCourseImg() {
@@ -98,6 +87,24 @@ public class CourseEntity implements java.io.Serializable {
 
     public CourseEntity setCourseImg(String courseImg) {
         this.courseImg = courseImg;
+        return this;
+    }
+
+    public TeacherEntity getMathTeacher() {
+        return mathTeacher;
+    }
+
+    public CourseEntity setMathTeacher(TeacherEntity mathTeacher) {
+        this.mathTeacher = mathTeacher;
+        return this;
+    }
+
+    public List<StudentEntity> getStudents() {
+        return students;
+    }
+
+    public CourseEntity setStudents(List<StudentEntity> students) {
+        this.students = students;
         return this;
     }
 }
