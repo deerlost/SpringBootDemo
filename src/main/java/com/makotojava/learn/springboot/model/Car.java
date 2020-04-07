@@ -14,7 +14,7 @@ import static java.util.stream.Collectors.toList;
  * @date：2018/12/21
  * @版本：V1.0
  */
-public class Car {
+public class Car implements Cloneable {
     private List<Car> carList;
 
     private String make;
@@ -58,6 +58,11 @@ public class Car {
 
     public int compare(Car car) {
         return new Integer(this.getYear()).compareTo(car.getYear());
+    }
+
+    @Override
+    public Car clone() throws CloneNotSupportedException {
+        return (Car) super.clone();
     }
 
 

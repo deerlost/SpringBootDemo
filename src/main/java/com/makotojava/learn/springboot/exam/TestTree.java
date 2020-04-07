@@ -1,6 +1,7 @@
 package com.makotojava.learn.springboot.exam;
 
 
+import com.makotojava.learn.springboot.model.Car;
 import com.makotojava.learn.springboot.model.Tree;
 
 /**
@@ -15,6 +16,17 @@ public class TestTree {
 
     public static void main(String[] args) {
 
+
+        Car c = new Car();
+        Car o = null;
+        try {
+            o = c.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(c);
+        System.out.println(o);
     }
 
 
