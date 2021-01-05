@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
-        <spring-boot.version>1.5.2.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
         <spring-jdbc.version>4.3.7.RELEASE</spring-jdbc.version>
         <junit.platform.version>1.0.0-M4</junit.platform.version>
         <junit.jupiter.version>5.0.0-M4</junit.jupiter.version>
@@ -78,6 +78,12 @@
     <dependencies>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+            <version>2.3.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
@@ -101,19 +107,33 @@
             <artifactId>itext-asian</artifactId>
             <version>5.2.0</version>
         </dependency>
-
-        <!--easypoi-->
         <dependency>
+            <groupId>cn.afterturn</groupId>
+            <artifactId>easypoi-base</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.afterturn</groupId>
+            <artifactId>easypoi-web</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.39.Final</version>
+        </dependency>
+        <!--easypoi-->
+        <!--<dependency>
             <groupId>cn.afterturn</groupId>
             <artifactId>easypoi-spring-boot-starter</artifactId>
             <version>3.3.0</version>
-        </dependency>
+        </dependency>-->
         <!-- odotCore -->
-        <dependency>
+       <!-- <dependency>
             <groupId>com.makotojava.learn</groupId>
             <artifactId>odotCore</artifactId>
             <version>${odotCore.version}</version>
-        </dependency>
+        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

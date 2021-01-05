@@ -25,6 +25,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.ResourceUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -54,7 +55,7 @@ public class TestEasyPOI {
 
     public static void main(String[] args) {
         try {
-            Scanner sc = new Scanner(System.in);
+         /*   Scanner sc = new Scanner(System.in);
 
             while(sc.hasNext()){
                 int n  =  sc.nextInt();
@@ -76,8 +77,8 @@ public class TestEasyPOI {
                     }
                 }
 
-            }
-                // testHo();
+            }*/
+              testHo();
             //testExportExcel_1();
             //testExportPDF_1();
 
@@ -111,7 +112,7 @@ public class TestEasyPOI {
 
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream("D:/targetFile/测试装车.xls");
+            fos = new FileOutputStream(ResourceUtils.getURL("classpath:").getPath()+"/测试.xls");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -251,8 +252,8 @@ public class TestEasyPOI {
         workbook.write(fos);
         fos.close();
 
-
     }
+
 
     public static void test() throws Exception {
         TemplateExportParams param = new TemplateExportParams("D:/sourceFile/test.xls");

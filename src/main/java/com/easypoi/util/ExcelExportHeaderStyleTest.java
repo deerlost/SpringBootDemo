@@ -41,7 +41,7 @@ public class ExcelExportHeaderStyleTest extends ExcelExportStylerDefaultImpl imp
         font.setFontHeightInPoints((short) 20);
         font.setFontName("华文中宋");
         //粗体显示
-        font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+    //    font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
        // font.setColor(HSSFColor.WHITE.index);
         headerStyle.setFont(font);
 

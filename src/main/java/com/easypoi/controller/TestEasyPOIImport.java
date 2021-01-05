@@ -3,19 +3,16 @@ package com.easypoi.controller;
 
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
-import com.easypoi.entity.CourseEntity;
 import com.easypoi.entity.DemandEntity;
-import com.easypoi.entity.HoDicLoadingRoute;
-import com.easypoi.entity.HoDicLoadingRoutePartner;
-import com.easypoi.entity.HoDicLoadingRouteVo;
 import com.easypoi.entity.MsgClient;
+import com.easypoi.entity.SysMessagePropertyDTO;
 import com.easypoi.util.ExeclUtil;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.junit.Test;
+import org.springframework.util.ResourceUtils;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.util.Date;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
@@ -27,6 +24,12 @@ import java.util.List;
  * @版本：V1.0
  */
 public class TestEasyPOIImport {
+
+    public static void main(String[] args) throws FileNotFoundException {
+        String s = "123asd";
+        System.out.println(s.substring(0,s.length()-1));
+       // test();
+    }
 
     @Test
     public void test2() {
@@ -43,7 +46,7 @@ public class TestEasyPOIImport {
     }
 
     @Test
-    public void test() {
+    public static void test() throws FileNotFoundException {
         long start = System.currentTimeMillis();
 
         /*ImportParams params = new ImportParams();
@@ -54,9 +57,7 @@ public class TestEasyPOIImport {
                 CourseEntity.class, params);*/
 
         ImportParams params = new ImportParams();
-        params.setTitleRows(1);
-        params.setHeadRows(2);
-        List<HoDicLoadingRouteVo> list = ExcelImportUtil.importExcel(new File("D:/targetFile/测试装车.xls"), HoDicLoadingRouteVo.class, params);
+        List<SysMessagePropertyDTO> list = ExcelImportUtil.importExcel(new File(ResourceUtils.getURL("classpath:").getPath(),"/excel/errorCode.xls"), SysMessagePropertyDTO.class, params);
         for (int i = 0; i < list.size(); i++) {
             System.out.println(ReflectionToStringBuilder.toString(list.get(i)));
         }
