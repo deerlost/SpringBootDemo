@@ -1,5 +1,7 @@
-package com.pattern.decorator;
+package com.designPattern.decorator;
 
+
+import com.designPattern.decorator.Shape;
 
 /**
  * @Description TODO

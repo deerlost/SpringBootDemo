@@ -1,5 +1,8 @@
-package com.pattern.decorator;
+package com.designPattern.decorator;
 
+
+import com.designPattern.decorator.impl.RedShapeDecorator;
+import com.designPattern.decorator.impl.ShapeDecorator;
 
 /**
  * @Description TODO 赋予行为

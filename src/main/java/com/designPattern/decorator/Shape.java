@@ -1,4 +1,4 @@
-package com.pattern.decorator;
+package com.designPattern.decorator;
 
 
 /**

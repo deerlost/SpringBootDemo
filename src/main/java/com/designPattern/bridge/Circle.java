@@ -1,4 +1,4 @@
-package com.designPattern.bridge.impl;
+package com.designPattern.bridge;
 
 
 import com.designPattern.bridge.DrawAPI;

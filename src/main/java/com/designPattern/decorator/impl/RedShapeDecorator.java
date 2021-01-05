@@ -1,5 +1,7 @@
-package com.pattern.decorator;
+package com.designPattern.decorator.impl;
 
+
+import com.designPattern.decorator.Shape;
 
 /**
  * @Description TODO
@@ -9,7 +11,7 @@ package com.pattern.decorator;
  * @date：2020/4/20
  * @版本：V1.0
  */
-public class RedShapeDecorator extends ShapeDecorator{
+public class RedShapeDecorator extends ShapeDecorator {
 
 
     public RedShapeDecorator(Shape shape) {
