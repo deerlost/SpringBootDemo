@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4506cfe4-a27e-485c-8c21-b5f67745b512" name="Default Changelist" comment="设计模式">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/callback/Word.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/StringSpilt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/algorithms/QuickSott.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/netty/client/NettyDemoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/InitArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/InitArray.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eiIwgGfZnpXhtiKBtxMx1Bu9qX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.45632184" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.easypoi.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.StringSpilt">
+    <configuration name="BridgePatternDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designPattern.bridge.BridgePatternDemo" />
+      <module name="SpringBootDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.designPattern.bridge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InitArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.leetcode.InitArray" />
+      <module name="SpringBootDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickSott" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.leetcode.algorithms.QuickSott" />
+      <module name="SpringBootDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leetcode.algorithms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringSpilt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.leetcode.StringSpilt" />
+      <module name="SpringBootDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEasyPOIImport" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.easypoi.controller.TestEasyPOIImport" />
+      <module name="SpringBootDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.easypoi.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SpringBootDemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.makotojava.learn.springboot.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StringSpilt" />
+        <item itemvalue="Application.QuickSott" />
+        <item itemvalue="Application.InitArray" />
+        <item itemvalue="Application.BridgePatternDemo" />
+        <item itemvalue="Application.TestEasyPOIImport" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4506cfe4-a27e-485c-8c21-b5f67745b512" name="Default Changelist" comment="" />
+      <created>1594798226649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594798226649</updated>
+      <workItem from="1594798228490" duration="1130000" />
+      <workItem from="1596680281568" duration="46000" />
+      <workItem from="1596699200812" duration="476000" />
+      <workItem from="1596699698809" duration="57000" />
+      <workItem from="1596699764706" duration="21000" />
+      <workItem from="1596699815955" duration="184000" />
+      <workItem from="1596700005472" duration="108000" />
+      <workItem from="1596700126763" duration="7431000" />
+      <workItem from="1596762172525" duration="6000" />
+      <workItem from="1598343343480" duration="1953000" />
+      <workItem from="1598411208314" duration="2650000" />
+      <workItem from="1598582842896" duration="244000" />
+      <workItem from="1600253695478" duration="76000" />
+      <workItem from="1602300905226" duration="16000" />
+      <workItem from="1602311217502" duration="649000" />
+      <workItem from="1602312344926" duration="1935000" />
+      <workItem from="1602315667084" duration="631000" />
+      <workItem from="1602572706002" duration="2208000" />
+      <workItem from="1603288793744" duration="431000" />
+      <workItem from="1603330074333" duration="598000" />
+      <workItem from="1603871742984" duration="87000" />
+      <workItem from="1603878000902" duration="203000" />
+      <workItem from="1603941664420" duration="1321000" />
+      <workItem from="1604308283457" duration="135000" />
+      <workItem from="1606446216634" duration="1520000" />
+      <workItem from="1606702181420" duration="616000" />
+      <workItem from="1606783918581" duration="18000" />
+      <workItem from="1607408870744" duration="1689000" />
+      <workItem from="1609302808019" duration="1285000" />
+      <workItem from="1609402482107" duration="160000" />
+      <workItem from="1609742180096" duration="3216000" />
+      <workItem from="1609808551345" duration="5999000" />
+      <workItem from="1609845894310" duration="102000" />
+      <workItem from="1609846328739" duration="19000" />
+      <workItem from="1609931368049" duration="234000" />
+      <workItem from="1611128027310" duration="1132000" />
+      <workItem from="1611195504232" duration="8000" />
+      <workItem from="1611214581331" duration="1000" />
+      <workItem from="1611571682115" duration="959000" />
+      <workItem from="1611627448156" duration="1299000" />
+      <workItem from="1611709980079" duration="184000" />
+      <workItem from="1614042879369" duration="734000" />
+      <workItem from="1614129737214" duration="36000" />
+      <workItem from="1614147341381" duration="2652000" />
+      <workItem from="1614217475827" duration="77000" />
+      <workItem from="1614681685240" duration="392000" />
+    </task>
+    <task id="LOCAL-00001" summary="设计模式 桥接模式 bridge">
+      <created>1609837060785</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609837060785</updated>
+    </task>
+    <task id="LOCAL-00002" summary="none">
+      <created>1609837104440</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609837104440</updated>
+    </task>
+    <task id="LOCAL-00003" summary="设计模式">
+      <created>1609837735915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609837735915</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="设计模式 桥接模式 bridge" />
+    <MESSAGE value="none" />
+    <MESSAGE value="设计模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="设计模式" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1147" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1609834572845">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="-1147" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1609834572845" />
+    <state width="1398" height="300" key="GridCell.Tab.0.bottom" timestamp="1614180327673">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1878" height="430" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611710164095" />
+    <state width="1398" height="346" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1614154549159" />
+    <state width="1398" height="254" key="GridCell.Tab.0.bottom/0.23.1440.806/-1920.-157.1920.1057@0.23.1440.806" timestamp="1609837899607" />
+    <state width="1878" height="374" key="GridCell.Tab.0.bottom/0.23.1440.806/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611661165842" />
+    <state width="1398" height="254" key="GridCell.Tab.0.bottom/0.23.1440.806/-1920.-180.1920.1080@0.23.1440.806" timestamp="1609839432355" />
+    <state width="1398" height="300" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1614180327673" />
+    <state width="1398" height="300" key="GridCell.Tab.0.center" timestamp="1614180327672">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1878" height="430" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611710164094" />
+    <state width="1398" height="346" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1614154549158" />
+    <state width="1398" height="254" key="GridCell.Tab.0.center/0.23.1440.806/-1920.-157.1920.1057@0.23.1440.806" timestamp="1609837899604" />
+    <state width="1878" height="374" key="GridCell.Tab.0.center/0.23.1440.806/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611661165841" />
+    <state width="1398" height="254" key="GridCell.Tab.0.center/0.23.1440.806/-1920.-180.1920.1080@0.23.1440.806" timestamp="1609839432351" />
+    <state width="1398" height="300" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1614180327672" />
+    <state width="1398" height="300" key="GridCell.Tab.0.left" timestamp="1614180327671">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1878" height="430" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611710164093" />
+    <state width="1398" height="346" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1614154549157" />
+    <state width="1398" height="254" key="GridCell.Tab.0.left/0.23.1440.806/-1920.-157.1920.1057@0.23.1440.806" timestamp="1609837899601" />
+    <state width="1878" height="374" key="GridCell.Tab.0.left/0.23.1440.806/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611661165840" />
+    <state width="1398" height="254" key="GridCell.Tab.0.left/0.23.1440.806/-1920.-180.1920.1080@0.23.1440.806" timestamp="1609839432343" />
+    <state width="1398" height="300" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1614180327671" />
+    <state width="1398" height="300" key="GridCell.Tab.0.right" timestamp="1614180327673">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1878" height="430" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611710164095" />
+    <state width="1398" height="346" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1614154549159" />
+    <state width="1398" height="254" key="GridCell.Tab.0.right/0.23.1440.806/-1920.-157.1920.1057@0.23.1440.806" timestamp="1609837899606" />
+    <state width="1878" height="374" key="GridCell.Tab.0.right/0.23.1440.806/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611661165841" />
+    <state width="1398" height="254" key="GridCell.Tab.0.right/0.23.1440.806/-1920.-180.1920.1080@0.23.1440.806" timestamp="1609839432353" />
+    <state width="1398" height="300" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1614180327673" />
+    <state width="1398" height="346" key="GridCell.Tab.1.bottom" timestamp="1614180321017">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1878" height="430" key="GridCell.Tab.1.bottom/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611710164098" />
+    <state width="1398" height="346" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1614154549161" />
+    <state width="1398" height="346" key="GridCell.Tab.1.bottom/0.23.1440.806@0.23.1440.806" timestamp="1614180321017" />
+    <state width="1398" height="346" key="GridCell.Tab.1.center" timestamp="1614180321015">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1878" height="430" key="GridCell.Tab.1.center/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611710164096" />
+    <state width="1398" height="346" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1614154549160" />
+    <state width="1398" height="346" key="GridCell.Tab.1.center/0.23.1440.806@0.23.1440.806" timestamp="1614180321015" />
+    <state width="1398" height="346" key="GridCell.Tab.1.left" timestamp="1614180321015">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1878" height="430" key="GridCell.Tab.1.left/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611710164096" />
+    <state width="1398" height="346" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1614154549160" />
+    <state width="1398" height="346" key="GridCell.Tab.1.left/0.23.1440.806@0.23.1440.806" timestamp="1614180321015" />
+    <state width="1398" height="346" key="GridCell.Tab.1.right" timestamp="1614180321016">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1878" height="430" key="GridCell.Tab.1.right/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611710164097" />
+    <state width="1398" height="346" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1614154549161" />
+    <state width="1398" height="346" key="GridCell.Tab.1.right/0.23.1440.806@0.23.1440.806" timestamp="1614180321016" />
+    <state x="450" y="165" width="540" height="524" key="StructurePopup" timestamp="1609838329849">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="450" y="165" width="540" height="524" key="StructurePopup/0.0.1440.900/-1920.-180.1920.1080@0.0.1440.900" timestamp="1609838329849" />
+    <state x="-1360" y="100" key="Vcs.Push.Dialog.v2" timestamp="1609837737202">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="-1360" y="100" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1609837737202" />
+    <state x="562" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611128036858">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="-1171" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1609836532473" />
+    <state x="562" y="384" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1611128036858" />
+    <state x="-1259" y="115" width="598" height="490" key="find.popup" timestamp="1611659898644">
+      <screen x="-1920" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="-1259" y="115" width="598" height="490" key="find.popup/0.0.1440.900/-1920.-180.1920.1080@-1920.-180.1920.1080" timestamp="1611659898644" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/easypoi/controller/TestEasyPOIImport.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.m2/repository/cn/afterturn/easypoi-base/3.3.0/easypoi-base-3.3.0.jar!/cn/afterturn/easypoi/excel/imports/ExcelImportService.class</url>
+          <line>377</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.m2/repository/org/apache/poi/poi/4.1.0/poi-4.1.0.jar!/org/apache/poi/ss/usermodel/WorkbookFactory.class</url>
+          <line>94</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.m2/repository/org/apache/poi/poi/4.1.0/poi-4.1.0.jar!/org/apache/poi/poifs/filesystem/FileMagic.class</url>
+          <line>122</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.m2/repository/cn/afterturn/easypoi-base/4.1.2/easypoi-base-4.1.2.jar!/cn/afterturn/easypoi/excel/imports/ExcelImportService.class</url>
+          <line>426</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.m2/repository/cn/afterturn/easypoi-base/4.1.2/easypoi-base-4.1.2.jar!/cn/afterturn/easypoi/excel/imports/ExcelImportService.class</url>
+          <line>431</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/easypoi/controller/TestEasyPOIImport.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/leetcode/InitArray.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/leetcode/StringSpilt.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="LOGGER" language="JAVA" />
+        <watch expression="ResourceUtils.getURL(&quot;classpath:&quot;).getPath(),&quot;/excel/errorCode.xls&quot;" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

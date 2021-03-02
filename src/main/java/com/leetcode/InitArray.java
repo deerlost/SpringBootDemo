@@ -23,9 +23,11 @@ public class InitArray {
 
         Integer[] integers = new Integer[10];
 
-        Arrays.fill(myarray, -1);
+        Arrays.fill(integers, -1);
 
         int[] ints = ArrayUtils.toPrimitive(integers);
+        System.out.println("myarr : " + Arrays.toString(myarray));
+        System.out.println("ints : " + Arrays.toString(ints));
 
 
     }
